@@ -1,10 +1,10 @@
 # ⚖️🤖 Proyecto Final — Derecho e Inteligencia Artificial
 
 **Pontificia Universidad Javeriana · 2026-II · Docente: Pedro Ardila**
-
-> **Estudiante:** [escribe aquí tu nombre completo]
-> **Nombre del proyecto:** [escribe aquí el nombre de tu herramienta]
-> **Fecha de inicio:** [AAAA-MM-DD]
+]-
+> **Estudiante:** [Maria Paula Rangel Gonzáles]
+> **Nombre del proyecto:** [PQRS]
+> **Fecha de inicio:** [2026-08-26]
 
 ---
 
@@ -22,25 +22,32 @@ Bienvenido/a a tu repositorio de proyecto. **Este archivo es tu tablero de mando
 
 ### 1.1 El problema jurídico
 ¿Qué problema **real del derecho colombiano** resuelve tu herramienta? ¿Quién lo sufre hoy y cómo lo resuelve sin tu herramienta?
+La propuesta está enfocada en facilitar el acceso de las personas a mecanismos mediante los cuales puedan hacer valer sus derechos ante entidades públicas o privadas en Colombia. En particular, busca solucionar las dificultades que surgen al momento de presentar una PQRS, ya que muchas personas no conocen la manera adecuada de formularla ni saben qué información deben proporcionar.
+
+Esta situación afecta principalmente a quienes no cuentan con conocimientos jurídicos, pues pueden tener claro el problema que desean solucionar, pero no saben cómo expresarlo formalmente ni cuál es el procedimiento que deben seguir. Actualmente, suelen recurrir a familiares, conocidos o profesionales del derecho para recibir orientación, lo que puede representar gastos y una inversión adicional de tiempo.
+
+La herramienta planteada pretende hacer este proceso más sencillo. El usuario podrá describir su situación utilizando palabras cotidianas y, a partir de esa información, recibirá una orientación inicial sobre el mecanismo más conveniente para su caso. Posteriormente, el sistema solicitará los datos necesarios para ayudar a construir una PQRS organizada, clara y acorde con la situación presentada. Finalmente, también proporcionará indicaciones sobre el proceso para presentarla o radicarla ante la entidad correspondiente.
 
 ### 1.2 Usuarios
-¿Quién va a usarla? Describe a tu usuario ideal en una frase (ej. *"un arrendatario bogotano que le subieron el canon de arrendamiento más del límite legal"*). Recuerda que al final necesitas **al menos un usuario real** que la pruebe.
+¿Quién va a usarla? Describe a tu usuario ideal en una frase (ej. *"un arrendatario bogotano que le subieron el canon de arrendamiento más del límite legal"*). Recuerda que al final necesitas **al menos un usuario real** que la pruebe. Personas en Colombia que necesitan presentar una PQRS, pero no tienen conocimientos jurídicos y requieren orientación para hacerlo correctamente.
 
 ### 1.3 Qué hace y qué NO hace (alcance)
 | ✅ Sí hace | ❌ No hace |
 | --- | --- |
-| [funcionalidad 1] | [fuera de alcance 1] |
-| [funcionalidad 2] | [fuera de alcance 2] |
+| [Explicar su situación en palabras sencillas] | [Recibir asesoría jurídica personalizada] |
+| [Recibir ayuda para redactar una PQRS] | [Garantizar el resultado de su solicitud] |
 
 *Consejo de abogado: un alcance pequeño y perfecto vale más que uno grande y roto.*
 
 ### 1.4 Marco jurídico y fuentes
 ¿Qué normas alimentan tu herramienta? Lista tu corpus normativo (leyes, decretos, sentencias — debe ser **pequeño y público**):
-- [ ] Norma/sentencia 1: [nombre + enlace]
-- [ ] Norma/sentencia 2: [nombre + enlace]
+- [https://www.funcionpublica.gov.co/eva/gestor ] Norma/sentencia 1: [nombre + enlace]
+- [https://www.constitucioncolombia.com/titulo- ] Norma/sentencia 2: [nombre + enlace]
 
 ### 1.5 Nombre y lema
 Un nombre corto para tu herramienta y una frase que explique qué hace (la usarás en la demo del día de presentaciones).
+PQRS fácil
+Te orienta y ayuda a redactar tu PQRS de forma clara y sencilla
 
 ---
 
