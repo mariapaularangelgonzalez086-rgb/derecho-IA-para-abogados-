@@ -18,7 +18,7 @@ Bienvenido/a a tu repositorio de proyecto. **Este archivo es tu tablero de mando
 
 ## 📋 Parte 1 — Descripción del proyecto
 
-> Completa cada sección con 3–10 frases. Sé concreto/a: esta descripción es la que tu IA usará como contexto y la que el docente usará para realimentarte.
+
 
 ### 1.1 El problema jurídico
 ¿Qué problema **real del derecho colombiano** resuelve tu herramienta? ¿Quién lo sufre hoy y cómo lo resuelve sin tu herramienta?
@@ -29,33 +29,32 @@ Esta situación afecta principalmente a quienes no cuentan con conocimientos jur
 La herramienta planteada pretende hacer este proceso más sencillo. El usuario podrá describir su situación utilizando palabras cotidianas y, a partir de esa información, recibirá una orientación inicial sobre el mecanismo más conveniente para su caso. Posteriormente, el sistema solicitará los datos necesarios para ayudar a construir una PQRS organizada, clara y acorde con la situación presentada. Finalmente, también proporcionará indicaciones sobre el proceso para presentarla o radicarla ante la entidad correspondiente.
 
 ### 1.2 Usuarios
-¿Quién va a usarla? Describe a tu usuario ideal en una frase (ej. *"un arrendatario bogotano que le subieron el canon de arrendamiento más del límite legal"*). Recuerda que al final necesitas **al menos un usuario real** que la pruebe. Personas en Colombia que necesitan presentar una PQRS, pero no tienen conocimientos jurídicos y requieren orientación para hacerlo correctamente.
+ Personas en Colombia que necesitan presentar una PQRS, pero no tienen conocimientos jurídicos y requieren orientación para hacerlo correctamente.
 
 ### 1.3 Qué hace y qué NO hace (alcance)
 | ✅ Sí hace | ❌ No hace |
 | --- | --- |
-| [Explicar su situación en palabras sencillas] | [Recibir asesoría jurídica personalizada] |
-| [Recibir ayuda para redactar una PQRS] | [Garantizar el resultado de su solicitud] |
+| [Permite que el usuario explique su situación en lenguaje sencillo] | [No reemplaza la asesoría de un abogado]|
+| [Recibir ayuda para redactar una PQRS] | [No garantiza que la entidad acepte o resuelva favorablemente la solicitud]|
 
-*Consejo de abogado: un alcance pequeño y perfecto vale más que uno grande y roto.*
+
 
 ### 1.4 Marco jurídico y fuentes
 ¿Qué normas alimentan tu herramienta? Lista tu corpus normativo (leyes, decretos, sentencias — debe ser **pequeño y público**):
-- [https://www.funcionpublica.gov.co/eva/gestor ] Norma/sentencia 1: [nombre + enlace]
-- [https://www.constitucioncolombia.com/titulo- ] Norma/sentencia 2: [nombre + enlace]
+- [https://www.funcionpublica.gov.co/eva/gestor ] 
+- [https://www.constitucioncolombia.com/titulo- ]
 
 ### 1.5 Nombre y lema
-Un nombre corto para tu herramienta y una frase que explique qué hace (la usarás en la demo del día de presentaciones).
+Un nombre corto para tu herramienta y una frase que explique qué hace 
 PQRS fácil
-Te orienta y ayuda a redactar tu PQRS de forma clara y sencilla
-
+Te orienta y te ayuda a redactar tu PQRS de forma clara y sencilla
 ---
 
 ## 🗺️ Parte 2 — Plan de desarrollo
 
 Marca cada hito cuando lo termines. Los hitos siguen las sesiones del curso.
 
-- [ ] **M0 — Descripción y plan** *(con Sesión 1)*: Partes 1 y 2 de este README completas.
+- [X] **M0 — Descripción y plan** *(con Sesión 1)*: Partes 1 y 2 de este README completas.
 - [ ] **M1 — Asistente con instrucciones v1** *(Sesión 1–2)*: redactaste las instrucciones (prompt de sistema) de tu asistente y funcionan en una herramienta gratuita de chat.
 - [ ] **M2 — Casos de prueba documentados** *(Sesión 2)*: tienes al menos 5 casos de prueba (donde antes fallaba) con resultados guardados en `docs/casos-de-prueba.md`.
 - [ ] **M3 — Corpus conectado (RAG)** *(Sesión 3)*: tu asistente **cita la fuente** normativa que usa y no inventa. Corpus cargado en `corpus/`.
@@ -66,8 +65,9 @@ Marca cada hito cuando lo termines. Los hitos siguen las sesiones del curso.
 | Semana | Qué hice | Enlace/captura | Dudas para la clase |
 | --- | --- | --- | --- |
 | 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 2 |Definí el problema jurídico, los usuarios, el alcance y las fuentes jurídicas de PQRS Fácil. También estructuré el plan inicial del proyecto. |<img width="1375" height="536" alt="image" src="https://github.com/user-attachments/assets/74f44fbe-1df5-4cb2-8770-557aad9979b2" />
+NO | |
+| 3 |termine la parte 3 del proyecto | | |
 | 4 | | | |
 | 5 | | | |
 
@@ -75,28 +75,28 @@ Marca cada hito cuando lo termines. Los hitos siguen las sesiones del curso.
 
 ## 🛠️ Parte 3 — Stack técnico recomendado
 
-Todo es **gratuito y no exige tarjeta de crédito**. Tu proyecto final debería verse así:
+Para desarrollar **PQRS Fácil** se utilizarán herramientas gratuitas que permitan construir un asistente de inteligencia artificial orientado a la elaboración de PQRS.
 
-```
-[Usuario] → [Interfaz web] → [Orquestación (LangChain)] → [Modelo (OpenRouter)]
-                                   ↕
-                          [Tu corpus normativo (RAG)]
-```
+La herramienta tendrá una interfaz sencilla donde el usuario podrá describir su situación y recibir una orientación inicial basada en las fuentes jurídicas seleccionadas.
 
-| Pieza | Herramienta recomendada | Para qué sirve (en cristiano) |
+### Arquitectura propuesta
+
+[Usuario] → [Interfaz web] → [LangChain] → [OpenRouter]
+
+　　　　　　　　　　　　　　　↕  
+　　　　　　　　　　　[Fuentes jurídicas - RAG]
+
+| Pieza | Herramienta | Para qué sirve |
 | --- | --- | --- |
-| **Interfaz web** | **v0.dev** (genera una app Next.js) o **Streamlit** (si tu agente trabaja en Python) | Lo que el usuario ve: cajas de texto, botones. Se la describes a la IA y ella la construye. |
-| **Orquestación** | **LangChain / LangGraph** | El "cerebro intermedio": toma la pregunta del usuario, busca en tus normas, arma el prompt y llama al modelo. |
-| **Modelo (LLM)** | **OpenRouter** — modelos con etiqueta `:free` | El "cerebro" que redacta. OpenRouter te da acceso a modelos gratuitos con una sola cuenta y una sola API key. |
-| **Memoria de fuentes (RAG)** | LangChain + almacén de vectores (**Chroma** o **FAISS** en local; **Supabase** si necesitas base de datos en la nube) | La técnica para que el modelo responda **con tus normas** y no con lo que "recuerda" (que puede ser una alucinación jurídica). |
-| **Trazabilidad** *(opcional)* | **LangSmith** (plan gratuito) | Ver qué le pasó a cada respuesta por dentro. Útil para depurar. |
+| **Interfaz web** | **Streamlit** | Será la parte que verá el usuario y permitirá escribir su situación y recibir una respuesta. |
+| **Orquestación** | **LangChain** | Ayudará a organizar las preguntas del usuario y conectar la inteligencia artificial con las fuentes jurídicas. |
+| **Modelo de IA** | **OpenRouter** | Será el modelo encargado de generar las respuestas de la herramienta. |
+| **Memoria de fuentes (RAG)** | **LangChain + Chroma** | Permitirá que el asistente consulte las normas jurídicas seleccionadas antes de generar una respuesta. |
+| **Trazabilidad** | **LangSmith (opcional)** | Permitirá revisar el funcionamiento de las respuestas y detectar posibles errores. |
 
-> 🔑 **Regla de oro:** tu `OPENROUTER_API_KEY` va en una **variable de entorno**, jamás pegada en el código ni en el chat. Si una clave se filtra en GitHub, revócala de inmediato en openrouter.ai → Keys.
+La arquitectura permitirá que PQRS Fácil reciba la situación del usuario, consulte las fuentes jurídicas disponibles y genere una respuesta fundamentada en dichas fuentes.
 
-Pídele a tu agente de IA que te explique esta arquitectura con tu proyecto concreto antes de escribir una línea de código.
-
----
-
+La clave de acceso de OpenRouter se almacenará como una variable de entorno y nunca se publicará directamente en el código del proyecto.
 ## 🚀 Parte 4 — Ruta de despliegue
 
 Tu meta: **una URL pública** que cualquiera pueda abrir. Elige una ruta:
